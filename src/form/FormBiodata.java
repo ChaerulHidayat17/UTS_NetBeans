@@ -9,7 +9,6 @@ import javax.swing.JOptionPane;
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
 
-
 public class FormBiodata extends javax.swing.JFrame {
 
     private Statement st;
@@ -34,6 +33,7 @@ public class FormBiodata extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         mainPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -65,7 +65,7 @@ public class FormBiodata extends javax.swing.JFrame {
         mainPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setText("Biodata");
+        jLabel1.setText("BIODATA");
 
         jLabel2.setText("Nama Mahasiswa/i:");
 
@@ -76,14 +76,16 @@ public class FormBiodata extends javax.swing.JFrame {
         jLabel5.setText("Jenis Kelamin");
 
         rbLaki.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(rbLaki);
         rbLaki.setText("Laki-laki");
 
         rbPerempuan.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(rbPerempuan);
         rbPerempuan.setText("Perempuan");
 
         jLabel6.setText("Prodi:");
 
-        cmbProdi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Program Studi", "Item 2", "Item 3", "Item 4" }));
+        cmbProdi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-- Program Studi --", "Teknik Informatika", "Teknik Sipil", "Teknik Mesin" }));
 
         jLabel7.setText("No. Telp");
 
@@ -137,46 +139,47 @@ public class FormBiodata extends javax.swing.JFrame {
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(470, 470, 470)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8))
-                        .addGap(54, 54, 54)
+                        .addGap(470, 470, 470)
+                        .addComponent(jLabel1))
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addGap(55, 55, 55)
                         .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tfNim, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
-                            .addComponent(tfNama)
-                            .addComponent(tfTTL, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
                             .addGroup(mainPanelLayout.createSequentialGroup()
-                                .addComponent(rbLaki)
-                                .addGap(18, 18, 18)
-                                .addComponent(rbPerempuan))
-                            .addComponent(cmbProdi, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(tfTelp, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1)))
-                    .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(btnSubmit)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnUpdate)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnDelete)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnClear)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnExit)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67))
+                                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel8))
+                                .addGap(54, 54, 54)
+                                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(tfNim, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
+                                    .addComponent(tfNama)
+                                    .addComponent(tfTTL, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
+                                    .addGroup(mainPanelLayout.createSequentialGroup()
+                                        .addComponent(rbLaki)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rbPerempuan))
+                                    .addComponent(cmbProdi, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tfTelp, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
+                                    .addComponent(jScrollPane1)))
+                            .addGroup(mainPanelLayout.createSequentialGroup()
+                                .addComponent(btnSubmit)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnUpdate)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnDelete)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnClear)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnExit)))
+                        .addGap(86, 86, 86)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 683, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -389,6 +392,23 @@ public class FormBiodata extends javax.swing.JFrame {
         tfNama.requestFocus();
     }
 
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {
+        int userResponse = JOptionPane.showOptionDialog(
+                this,
+                "Apakah Anda Ingin Keluar?",
+                "Exit",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                null,
+                null
+        );
+
+        if (userResponse == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -430,6 +450,7 @@ public class FormBiodata extends javax.swing.JFrame {
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnSubmit;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cmbProdi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
